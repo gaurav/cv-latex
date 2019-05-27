@@ -1,0 +1,50 @@
+\usepackage{lastpage}
+\usepackage{changepage}   % for the adjustwidth environment
+\usepackage[hang,flushmargin]{footmisc}
+\usepackage{todonotes}
+\usepackage{tgtermes}
+\usepackage{helvet}
+\usepackage{marvosym}
+\usepackage{lipsum}
+\usepackage{enumitem}
+\usepackage{anysize}
+\usepackage{wrapfig}
+\usepackage{pifont}
+\usepackage{comment}
+\usepackage[small,compact]{titlesec}
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=black]{hyperref}
+
+%\marginsize{28mm}{28mm}{8mm}{8mm}
+%\marginsize{22mm}{22mm}{4mm}{4mm}
+\marginsize{24mm}{24mm}{8mm}{4mm}
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{1em}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+
+\newenvironment{publications}%
+    {\small\vspace{-0.5em}\begin{itemize}[noitemsep,nolistsep]}%
+    {\end{itemize}\normalsize}
+
+\newcommand{\smallbullet}{$\vcenter{\hbox{\small$\bullet$}}$}
+\newcommand{\tinybullet}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\setlist[itemize]{leftmargin=2em}
+\renewcommand\labelitemi{\smallbullet}
+\renewcommand\labelitemii{\tinybullet}
+
+\renewcommand{\part}[1]{
+    {\fontfamily{phv}\selectfont
+        \subsection*{\centering #1}
+    }
+}
+\newcommand{\entry}[4]{{\fontfamily{phv}\selectfont\small #1 to #2~\smallbullet~\textbf{#3}~\smallbullet~#4}}
+
+\newcommand{\phonenum}[3]{
+    \Telefon~{\tt 
+        \href{tel:+#1#2#3}{+1\hspace{0.3em}(#1)\hspace{0.3em}#2\hspace{0.3em}#3}
+    }
+}
+\newcommand{\email}[1]{
+    \Letter~{\tt \href{mailto:#1}{#1}}
+}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:#1}}
