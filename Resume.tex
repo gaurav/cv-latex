@@ -2,6 +2,12 @@
 
 \include{setup}
 
+% We use the "detail" variable to control what is displayed:
+%   1 = Lowest level of detail
+%   2 = Medium level of detail
+%   3 = High level of detail
+\newcommand\detail{2}
+
 \usepackage{fancyhdr}
  
 \pagestyle{fancy}
@@ -17,9 +23,9 @@
 \begin{center}
 
 {\fontfamily{phv}\selectfont
-\large Gaurav Vaidya, Ph.D. \\
+\Large Gaurav Vaidya, Ph.D. \\
 \small
-3611 SW 34th St Apt 72, Gainesville, Florida 32608, USA \\
+621 Cosgrove Hill, Chapel Hill, North Carolina 27514, USA \\
 \Letter~{\tt \href{mailto:gaurav@ggvaidya.com}{gaurav@ggvaidya.com}}
 \hspace{0.25em}
 \Telefon~{\tt \href{tel:+13034166421}{+1\hspace{0.3em}(303)\hspace{0.3em}416\hspace{0.3em}6421}\hspace{0.3em}} \\
@@ -36,149 +42,28 @@
 
 \part{Career summary and goals}
 
-Having built scientific software since I was an undergraduate, I have seen first-hand how a well-designed and easy-to-use scientific tool can answer important questions and reveal previously unseen patterns in data. I have been developing scientific tools for academics since 2004, apart from a four-year stint as a software architect for a startup, and am currently the lead software developer on an academic software development project. I believe that the future of science will be built upon reproducible analyses using open source tools that use findable, accessible, interoperable and reusable data. I hope to design and build the  software tools that will help transform so many different disciplines, and to train the scientists and scientific programmers who will take the next step into this data-rich future.
-
-% Educational qualifications
-
-\part{Educational history}
-
-\entry{2011}{2017}{Doctor of Philosophy}{University of Colorado Boulder, USA}
-
-My dissertation in Ecology and Evolutionary Biology was supervised by Prof. Robert Guralnick. I quantified the rates at which scientific names and their meanings changed within two North American taxonomic checklist series, each made up of dozens of checklists containing hundreds of taxonomic changes. I built a software tool in Java that I used to identify and annotate these changes, facilitating their use as biodiversity data\footnote{SciNames, source code available at \url{https://github.com/gaurav/scinames}}.
-
-\begin{publications}
-
-\item \textbf{Vaidya G}, Lepage D, Guralnick R (2018) The tempo and mode of the taxonomic correction process: how taxonomists have corrected and recorrected North American bird species over the last 127 years. \textit{PLOS ONE} \textbf{13}(4):~e0195736 \doi{10.1371/journal.pone.0195736}.
-
-\item \textbf{Vaidya G} (2017) Taxonomic Checklists as Biodiversity Data: How Series of Checklists can Provide Information on Synonymy, Circumscription Change and Taxonomic Discovery. Ph.D. Dissertation. \doi{10.17605/OSF.IO/N2KH5}.
-
-% \item \textbf{Vaidya G*}, Guralnick R (October 1, 2014) Names, meanings, and the meaninglessness of names. \textit{The Meaning of Names: Naming Diversity in the 21st Century}, University of Colorado Museum of Natural History, Boulder CO.
-
-\item \textbf{Vaidya G*}, Lepage D, Lapp H, Guralnick RP (September 26, 2014) Measuring The Outputs Of Taxonomy: How Many Species Of North American Birds Have Been Recircumscribed In The Last 128 Years? Presentation at \textit{AOU/COS/SCO Annual Meeting 2014}, Estes Park, Colorado.
-
-\item Lepage D, \textbf{Vaidya G}, Guralnick R (2014) Avibase --- a database system for managing and organizing taxonomic concepts. \textit{ZooKeys}~\textbf{420}:~117-135. \doi{10.3897/zookeys.420.7089}
-
-\item \textbf{Vaidya G*}, Lepage D, Lapp H, Guralnick R (August 14, 2013) Quantifying taxonomic redescription: patterns of lumping and splitting in the last 127 years of the \textit{Check-List of North American Birds}. Presentation at \textit{AOU/COS Annual Meeting 2013}, Chicago IL. (\href{https://speakerdeck.com/gaurav/quantifying-taxonomic-redescription-patterns-of-lumping-and-splitting-in-the-last-127-years-of-the-check-list-of-north-american-birds}{slides})
-
-\item Stoltzfus A, et al. (2013) Phylotastic! Making tree-of-life knowledge accessible, reusable and convenient. \textit{BMC Bioinformatics}~\textbf{14}:~158. \doi{10.1186/1471-2105-14-158}.
-
-\item Thomer A, \textbf{Vaidya G*}, Guralnick R, Bloom D, Russell L (November 8, 2012) Extracting data from historical documents. Presentation at \textit{Museum Computer Network 2012}, Seattle WA. (\href{http://www.slideshare.net/mrvaidya/extracting-data-from-historical-documents-crowdsourcing-annotations-on-wikisource}{slides}, \href{http://www.youtube.com/watch?v=_FHJgI1Aj0g}{video})
-
-\item Thomer A, \textbf{Vaidya G}, Guralnick R, Bloom D, Russell L (2012) What Henderson Saw: Extracting observations from century-old field notebooks. \textit{ZooKeys} \textbf{209}:~235-253. \\ \doi{10.3897/zookeys.209.3247}.
-
-\end{publications}
-
-\entry{2002}{2006}{Bachelor of Science with Merit}{National University of Singapore}
-
-I majored in Life Sciences with minors in Computational Science and Economics. I began working with the Evolutionary Biology lab in my first year, and was hired as a lab officer in my first year after graduating. I contributed to several published software tools and analyses.
-
-\begin{publications}
-
-%\item \textbf{Vaidya G*}, Meier R, Lohman D (June 26, 2009) SequenceMatrix: Gene concatenation made easy. Presentation at \textit{Hennig~XXVIII}, Singapore.
-
-% \item Kwong S, Srivathsan A, \textbf{Vaidya G}, Meier R (2011) Is the COI barcoding gene involved in speciation through intergenomic conflict? \textit{Molecular Phylogenetics and Evolution} \textbf{62}(3):~1009-1012. \doi{10.1016/j.ympev.2011.11.034}.
-
-\item \textbf{Vaidya, G}, Lohman D, Meier R (2011) SequenceMatrix: concatenation software for the fast assembly of multi-gene datasets with character set and codon information. \textit{Cladistics}, \textbf{27}:~171-180. \doi{10.1111/j.1096-0031.2010.00329.x}.
-
-\item Dikow T, Meier R, \textbf{Vaidya GG}, Londt JGH (2009) Biodiversity research based on taxonomic revisions --- a tale of unrealized opportunities. \textit{Diptera Diversity: Status, Challenges and Tools}, chapter 12. Koninklijke Brill NV. \url{http://www.tdvia.de/pdf/dikow_etal_2009.pdf}.
-
-\item Meier R, Kwong S, \textbf{Vaidya G}, Ng PKL (2006) DNA Barcoding and Taxonomy in Diptera: A Tale of High Intraspecific Variability and Low Identification Success. \textit{Systematic Biology} \textbf{55}(5): 715-728. \doi{10.1080/10635150600969864}.
-
-\end{publications}
+I have been building scientific software since I was an undergraduate in my first lab, where I discovered first-hand how a well-designed and easy-to-use scientific tool could answer important questions and reveal previously unseen patterns in data. Over the last decade, the Semantic Web has taken giant strides towards building thoroughly documented, reproducible scientific analyses using open source tools to analyse findable, accessible, interoperable and reusable data. I want to be at the forefront of designing and building these tools and to train the scientists and scientific programmers who will take the next steps into the data-rich future of science.
 
 % Work experience
+\input{WorkExperience}
 
-\part{Work experience}
-
-\entry{2018}{present}{Postdoctoral Associate}{Florida Museum of Natural History, Gainesville}
-
-I work full-time as the lead software developer on the Phyloreferencing project (\href{http://phyloref.org}{phyloref.org}). Our goal is to build an ontology of definitions for groups of related biological organisms, as well as the software and ontological infrastructure needed to create, edit, organize and test these definitions. We are also building a demonstration website that will allow users to resolve these definitions on any evolutionary hypothesis (`phylogenies'). I use JavaScript in Node.js, Vue CLI, Java and Python to build these tools.
-
-\begin{publications}
-
-\item Source code, issues and project management available at \url{https://github.com/phyloref}.
-
-\item \textit{Phyx.js} JavaScript package published as \url{https://npmjs.com/package/@phyloref/phyx}.
-
-\item \textbf{Vaidya, G*}, Lapp H, Cellinese N (March 12, 2019) Building an ontology of logic definitions for groups of biological organisms to enable data integration. Poster at \textit{US2TS 2019}, Durham NC, USA. \doi{10.6084/m9.figshare.7904999.v1}.
-
-\item \textbf{Vaidya, G*}, Lapp H, Cellinese N* (August 29, 2018) All the Clades in the World: Building a Semantically-Rich and Testable Ontology of Phylogenetic Clade Definitions. Presentation at \textit{SPNHC+TDWG 2018 Conference}, Dunedin, New Zealand. \doi{10.3897/biss.2.25776}.
-
-\end{publications}
-
-I worked part-time on the Phyloreferencing project while completing my PhD from 2016 to 2017.
-
-\begin{publications}
-
-\item \textbf{Vaidya G*}, Lapp H, Cellinese N (December 6, 2016) Creating computable definitions for clades using the Web Ontology Language (OWL). Presentation at \textit{TDWG 2016 Annual Conference}, Santa Clara de San Carlos, Costa Rica. (\href{https://speakerdeck.com/gaurav/creating-computable-definitions-for-clades-using-the-web-ontology-language-owl}{slides}, \href{https://vimeo.com/198739085}{video})
-
-\item \textbf{Vaidya G*}, Lapp H, Cellinese N (June 18, 2016) The Semantic Clade. Presentation at \textit{Evolution 2016}, Austin TX. (\href{https://speakerdeck.com/gaurav/the-semantic-clade}{slides}, \href{https://www.youtube.com/watch?v=_aNaAQYTNVc}{video})
-
-\end{publications}
-
-\entry{May}{August 2014}{Student developer}{\mbox{DBpedia}, funded by Google Summer of Code}
-
-I extended \mbox{DBpedia's} fact extraction software to support extracting facts in the Resource Description Framework (RDF) from the Wikimedia Commons, an online repository that then contained around 25~million media files across a number of formats and licenses.
-
-\begin{publications}
-
-\item \textbf{Vaidya G*} (October 9, 2015) Metadata from the Commons. Presentation at \textit{WikiConference USA 2015}, Washington DC.
-
-\item \textbf{Vaidya G}, Kontokostas D, Knuth M, Lehmann J, Hellmann S (2015) DBpedia Commons: Structured multimedia metadata from the Wikimedia Commons. \textit{The Semantic Web --- ISWC 2015}, volume \textbf{9367} of Lecture Notes in Computer Science, pages 281-289. Springer International Publishing. \doi{10.1007/978-3-319-25010-6\_17}.
-
-\end{publications}
-
-\entry{January}{May 2013}{Graduate fellowship}{NESCent, Durham, North Carolina}
-
-\nopagebreak
-This fellowship allowed me to work exclusively on my PhD for one semester with a mentor at the National Evolutionary Synthesis Center (NESCent) in Durham, North Carolina\footnote{Proposal available at \url{https://www.nescent.org/science/awards\_summary.php-id=374.html}}. My mentor at NESCent, Hilmar Lapp, would later hire me to work on the Phyloreferencing project.
-
-\entry{June}{August 2012}{Graduate student assistant}{University of Colorado Boulder}
-
-I worked on the Art of Life project\footnote{Details at \url{https://about.biodiversitylibrary.org/projects/past-projects/art-of-life/}} funded by the Missouri Botanical Garden, where I helped develop and test a data schema to store structured information on illustrations, photographs and maps extracted from biodiversity journals.
-
-\begin{publications}
-
-\item \textbf{Vaidya G*} (March 13, 2015) Describing natural history illustrations in the Art of Life project via the Wikipedia Commons platform. Presentation at \textit{Visual Resources Association's 33rd Annual Conference}, Denver CO. (\href{https://speakerdeck.com/gaurav/vra-2015-describing-natural-history-illustrations-in-the-art-of-life-project-via-the-wikipedia-commons-platform}{slides})
-
-\end{publications}
-
-\entry{2011}{2016}{Graduate research/teaching assistant}{University of Colorado Boulder}
-
-From 2011 to 2015, I worked on the Map of Life and VertNet projects, where I developed a web application for synthesizing and managing vernacular names extracted from multiple sources\footnote{Source code available at \url{https://github.com/MapofLife/vernacular-names}}, a web API for efficiently searching a large database of taxonomic names\footnote{Source code available at \url{https://github.com/gaurav/taxrefine}}, and a Python tool to identify errors in species names (now deprecated).
-
-\begin{publications}
-
-\item Vaidya G (July 22, 2013) Validating scientific names with the GBIF Checklist Bank. Blog post at \url{https://blog.vertnet.org/post/56169017224/taxonomic-validation-vaidya}.
-
-\item Wieczorek J*, Steele A, Jetz W, Guralnick R, Hill A, \textbf{Vaidya G*}, Rosauer D (October 20, 2011) Map of Life. Presentation at \textit{TDWG 2011}, New Orleans LA. (\href{https://speakerdeck.com/gaurav/map-of-life-computer-demo-at-tdwg-2011}{slides})
-
-\end{publications}
-
-From 2015 to 2016, I taught Evolutionary Biology and General Biology labs, in which I led classes of up to eighteen undergraduate students through hands-on exercises to build their understanding of biology and evolution.
-
-\entry{2007}{2011}{Software architect}{Paper Terminal Pte Ltd, Singapore}
-
-I was their primary software developer, responsible for developing new web applications from prototypes to final deployment, including {\it OCR~Terminal}, my company's flagship product. I also managed our computer systems on both on-site and Amazon EC2 cloud plaform across multiple operating systems.
-
-% \entry{2006}{2007}{Lab officer}{Evolutionary Biology Laboratory, National University of Singapore}
-
-% I helped manage computer-related infrastructure, from sending computers for servicing to installing scientific software on both local hardware and remote computing clusters.
+% Educational qualifications
+\input{Education}
 
 \part{Other relevant experience}
 
-I love teaching and am very interested in using pedagogically sound techniques to improve learning for my students, particularly through the active learning method. Apart from taking classes in pedagogy in graduate school and attending teacher training workshops on campus, I am a certified Carpentry instructor and have taught Software Carpentry workshops (\url{https://carpentries.org/instructors/}). I am currently on the board of the University of Florida Carpentries Club (\href{http://uf-carpentries.org/}{uf-carpentries.org}), through which I help organize local training of computing skills.
+I love teaching and am very interested in using pedagogically sound techniques to improve learning for my students, particularly through the active learning method. I took classes in pedagogy in graduate school and attended teacher training workshops on campus. Since 2018, I have been a certified instructor with \textit{The Carpentries} (\href{https://carpentries.org/}{carpentries.org}), a global community teaching foundational computational and data science skills to researchers in academia, industry and government. I've taught three Software Carpentry workshops so far; at each, I taught Python programming skills to 15-20 students.
 
-I have been an editor on Wikipedia for over sixteen years\footnote{My user page on Wikipedia is at \url{https://en.wikipedia.org/wiki/User:Gaurav}}. I am involved in the organization of the Wikimedians of Colorado User Group\footnote{Details available at \url{https://meta.wikimedia.org/wiki/Wikimedians\_of\_Colorado\_User\_Group}} and have started organizing local events at the University of Florida.
+I have been an editor on Wikipedia for over sixteen years\footnote{My user page on Wikipedia is at \url{https://en.wikipedia.org/wiki/User:Gaurav}}. I was involved in the formation of the Wikimedians of Colorado User Group\footnote{Details available at \url{https://meta.wikimedia.org/wiki/Wikimedians\_of\_Colorado\_User\_Group}} and have organized local events at the University of Florida.
 
-\begin{comment}
 \begin{center}
+
+\pgfornament[width=3.5cm]{84}
 
 \small
 
 \textit{Prepared on \today.}
 
 \end{center}
-\end{comment}
 
 \end{document}

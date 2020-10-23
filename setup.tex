@@ -1,3 +1,4 @@
+\usepackage{pgfornament}  % for ornaments
 \usepackage{lastpage}
 \usepackage{changepage}   % for the adjustwidth environment
 \usepackage[hang,flushmargin]{footmisc}
@@ -21,9 +22,11 @@
 \setlength{\parskip}{1em}
 \titlespacing{\subsection}{0pt}{*0}{*0}
 
-\newenvironment{publications}%
+\newenvironment{products}%
     {\small\vspace{-0.5em}\begin{itemize}[noitemsep,nolistsep]}%
     {\end{itemize}\normalsize}
+
+\newcommand{\product}[2][2]{\ifnum #1 < \numexpr \detail + 1 \relax \item #2 \fi}
 
 \newcommand{\smallbullet}{$\vcenter{\hbox{\small$\bullet$}}$}
 \newcommand{\tinybullet}{$\vcenter{\hbox{\tiny$\bullet$}}$}
