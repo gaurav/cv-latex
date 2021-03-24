@@ -3,17 +3,38 @@
 
 \part{Work experience}
 
-\entry{Oct 2019}{present}{Semantic Web technologist}{RENCI, UNC, Chapel Hill, North Carolina}
+\entry{Oct 2019}{Dec 2020}{Semantic Web technologist}{RENCI, UNC Chapel Hill, North Carolina}
 
 At the Renaissance Computing Institute (RENCI) at the University of North Carolina (UNC), I work on several projects to facilitate the re-use of biomedical data by other scientists, with a particular focus on using Semantic Web technologies to make scientific data findable, accessible, interoperable, and reusable. To achieve this, I work with tools that use standards such as RDF and JSON-LD to store and transmit semantically rich data, use ontologies written in OWL to reason over data, and use descriptions in SHACL and ShEx to validate data and document data models. Where existing tools are unavailable or inadequate, I write software tools to fill this need. My current projects focus on genetic, disease and other biomedical data, but I look forward to working with other kinds of data in the future. I work primarily in Scala to build these tools.
 
 \begin{itemize}
 
-\item \textit{Center for Cancer Data Harmonization} (CCDH): My primary project right now is as a member of the Tools and Data Quality group at CCDH, where I am working with other programmers and scientists to build model description, data validation and transformation tools for a variety of biomedical data related to cancer. Among the types of data that CCDH hopes to harmonize include genomic, proteomic, image and patient data, requiring flexible tools that can understand a variety of information types.
+\item \textit{Center for Cancer Data Harmonization} (CCDH): My primary project right now is as a member of the Tools and Data Quality group at CCDH, where I am working with other programmers and scientists to build model description, data validation and transformation tools for a variety of biomedical data related to cancer. Among the types of data that CCDH hopes to harmonize include genomic, proteomic, image and patient data, requiring flexible tools that can understand a variety of information types. I worked primarily on two tools:
 
-\item \textit{Data modeling and validation with ClinGen}: The ClinGen project is working on developing several data models for recording and sharing information relating to rare genetic variants that may be involved in causing diseases. The current spreadsheet-based data model description requires manual translation into the JSON Schema language to validate data against this specification. I am working with a group of developers to convert the data model into the SHACL shape description language, which could be used both to validate new data and to produce human-readable documentation. My current goal is to build a better command-line tool for SHACL validation\footnote{SHACLI, source code available at \url{https://github.com/gaurav/shacli}}.
+\begin{products}
+
+\product[2]{csv2caDSR, a tool for harmonizing CSV files against common data elements in the caDSR: \url{https://github.com/cancerDHC/csv2caDSR}}
+
+\product[2]{umls-rrf-scala, a tool for generating mappings between terms in the NCI Metathesaurus in the UMLS RRF format: \url{https://github.com/cancerDHC/umls-rrf-scala}}
+
+\end{products}
+
+\item \textit{Data modeling and validation with ClinGen}: The ClinGen project is working on developing several data models for recording and sharing information relating to rare genetic variants that may be involved in causing diseases. The current spreadsheet-based data model description requires manual translation into the JSON Schema language to validate data against this specification. I am working with a group of developers to convert the data model into the SHACL shape description language, which could be used both to validate new data and to produce human-readable documentation.
+
+\begin{products}
+
+\product[2]{SHACLI, a command-line tool for validating RDF data against SHACL shapes: \url{https://shacli.org/}, with source code available at \url{https://github.com/gaurav/shacli}}
+
+\end{products}
 
 \item \textit{Reasoning Over Biomedical Objects linked in Knowledge Oriented Pathways} (Robokop): I am improving an existing tool for extracting useful information from PubMed's database of publication abstracts\footnote{Omnicorp, source code available at \url{https://github.com/NCATS-Gamma/omnicorp}}. My contribution has been in adding publication metadata, such as authorship, publication information and DOIs, in RDF for use by downstream graph databases, as well as generally improving testing and deployment options. It is also an opportunity for me to improve my skills with running long-running tasks on computer clusters.
+
+
+\begin{products}
+
+\product[2]{Korn D, Bobrowski T, Li M, Kebede Y, Wang P, Owen P, \textbf{Vaidya G}, Muratov E, Chirkova R, Bizon C, Alexander Tropsha A (2020) COVID-KOP: integrating emerging COVID-19 data with the ROBOKOP database. \textit{Bioinformatics}:btaa718 \doi{10.1093/bioinformatics/btaa718}}
+
+\end{products}
 
 \end{itemize}
 
