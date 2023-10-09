@@ -11,11 +11,11 @@ To tackle this challenge, I help build databases that document how identifiers i
 
 \begin{itemize}
 
-\item \textit{NCATS Biomedical Data Translator} (2022 - present): The Translator project is an ambitious project to build a tool capable of answering complex biomedical questions by querying multiple biomedical search engines (``Autonomous Relay Agents'') developed for this purpose, each of which can itself query a large number of knowledge sources. These results are synthesized into a single list of potential solutions with citations to appropriate publications and presented to the user. However, different Translator components -- particularly the knowledge sources -- could use different identifiers to refer to the same biomedical concepts.
+\item \textit{NCATS Biomedical Data Translator} (\since{2022}): The Translator project is an ambitious project to build a tool capable of answering complex biomedical questions by querying multiple biomedical search engines (``Autonomous Relay Agents'') developed for this purpose, each of which can itself query a large number of knowledge sources. These results are synthesized into a single list of potential solutions with citations to appropriate publications and presented to the user. However, different Translator components -- particularly the knowledge sources -- could use different identifiers to refer to the same biomedical concepts.
 
 In order to create a single set of normalized concept identifiers, RENCI previously developed a Node Normalization tool, a massive database of biomedical identifier cliques that are believed to refer to the same concept, with a single preferred identifier for each clique. We also developed a Name Resolution tool, which allows this database of cliques to be searched for by names and synonyms, which is useful for both recognizing biomedical concepts mentioned in text and for enabling autocomplete functionality on Translator websites.
 
-Since 2022, I have been in charge of both of these components, as well as a developer on one of the knowledge sources (Causal Activity Models Knowledge Provider, or CAM-KP) that provides information on biomedical pathways to the Translator search engines.
+Since 2022, I have been in charge of both of these components, as well as a developer on one of the knowledge sources (Causal Activity Models Knowledge Provider, or CAM-KP) that provides information on biomedical pathways to the Translator search engines. I work on triaging issues reported by scientists working on Translator and fixing bugs to ensure that these components are as accurate as possible, developing new features such as improved search queries and adding descriptions from ontologies, and improving how these components are built and deployed on both our in-house Kubernetes cluster as well as production cluster hosted on the NCATS servers.
 
 \begin{products}
 
@@ -29,15 +29,21 @@ Since 2022, I have been in charge of both of these components, as well as a deve
 
 \product[2]{CAM-Pipeline, a data pipeline using Make, Scala and Souffle to convert biomedical pathway information from a variety of data sources into the TRAPI format for use by Translator applications: \github{ExposuresProvider}{cam-pipeline}.}
 
-\product[2]{CAM-KP-API (2022-23), a Scala web app for making CAM-KP biomedical pathway information accessible via TRAPI. Now replaced with the ORION pipeline and Plater tool, but source code still available: \github{ExposuresProvider}{cam-kp-api}.}
+\product[2]{CAM-KP-API (\fromto{2022}{2023}), a Scala web app for making CAM-KP biomedical pathway information accessible via TRAPI. Now replaced with the ORION pipeline and Plater tool, but source code still available: \github{ExposuresProvider}{cam-kp-api}.}
 
 \end{products}
 
-\item \textit{NIH HEAL Data Stewards} (2021 - present): 
+\item \textit{NIH HEAL Data Stewards} (\since{2021}): The National Institutes of Health Helping to End Addiction Long-term Initiative (``NIH HEAL Initiative'') is an aggressive, trans-agency effort to speed scientific solutions to stem the national opioid and pain public health crises. The HEAL Data Stewards are the component of HEAL responsible for ensuring that all the scientific data collected from HEAL-funded studies are as Findable, Accessible, Interoperable and Reusable (FAIR) as possible. Apart from assisting with data standardization efforts, most of my work on HEAL focused on building HEAL Semantic Search, based upon a semantic search engine previously developed at RENCI called Dug. I work on identifying and designing features needed to meet HEAL's scientific needs, developing data ingest and annotation tools for a variety of scientific data, and work on incorporating new types of resources into HEAL Semantic Search, such as information from the HEAL Common Data Elements (CDE) Repository.
 
-\item \textit{FHIRCat} (2021 - present): 
+\begin{products}
 
-\item \textit{Center for Cancer Data Harmonization} (CCDH, 2019-22): My primary project right now is as a member of the Tools and Data Quality group at CCDH, where I am working with other programmers and scientists to build model description, data validation and transformation tools for a variety of biomedical data related to cancer. Among the types of data that CCDH hopes to harmonize include genomic, proteomic, image and patient data, requiring flexible tools that can understand a variety of information types. I worked primarily on two tools:
+\product[2]{HEAL Semantic Search, a search engine for HEAL data: \url{https://heal.renci.org/}, \github{helxplatform}{dug}.}
+
+\end{products}
+
+\item \textit{FHIRCat} (\since{2021}): The FHIR Catalog (FHIRCat) project aims to simplify the use of the RDF representation of the Fast Health Interoperability Resources (FHIR) specification so that FHIR data can be aggregated and analyzed using triple stores. This involves discussions with FHIR developers to come up with the best ways of representing FHIR in RDF, testing these approaches on actual patient data, and building software tools for filling in any gaps in these approaches.
+
+\item \textit{Center for Cancer Data Harmonization} (\fromto{2019}{2022}): I was a member of the Tools and Data Quality group at CCDH, where I am worked with other programmers and scientists to build model description, data validation and transformation tools for a variety of biomedical data related to cancer. Among the types of data that CCDH hoped to harmonize include genomic, proteomic, image and patient data, requiring flexible tools that can understand a variety of information types. I worked primarily on two tools:
 
 \begin{products}
 
@@ -47,6 +53,8 @@ Since 2022, I have been in charge of both of these components, as well as a deve
 
 \end{products}
 
+\begin{comment}
+
 \item \textit{Data modeling and validation with ClinGen} (2019): The ClinGen project is working on developing several data models for recording and sharing information relating to rare genetic variants that may be involved in causing diseases. The current spreadsheet-based data model description requires manual translation into the JSON Schema language to validate data against this specification. I am working with a group of developers to convert the data model into the SHACL shape description language, which could be used both to validate new data and to produce human-readable documentation.
 
 \begin{products}
@@ -54,6 +62,8 @@ Since 2022, I have been in charge of both of these components, as well as a deve
 \product[2]{SHACLI, a command-line tool for validating RDF data against SHACL shapes: \url{https://shacli.org/}, with source code available at \url{https://github.com/gaurav/shacli}}
 
 \end{products}
+
+\end{comment}
 
 \item \textit{Reasoning Over Biomedical Objects linked in Knowledge Oriented Pathways} (Robokop): I am improving an existing tool for extracting useful information from PubMed's database of publication abstracts\footnote{Omnicorp, source code available at \url{https://github.com/NCATS-Gamma/omnicorp}}. My contribution has been in adding publication metadata, such as authorship, publication information and DOIs, in RDF for use by downstream graph databases, as well as generally improving testing and deployment options. It is also an opportunity for me to improve my skills with running long-running tasks on computer clusters.
 
@@ -76,6 +86,10 @@ I worked full-time as the lead software developer on the Phyloreferencing projec
 
 \product[2]{\textit{Phyx.js} package published to NPM as \url{https://npmjs.com/package/@phyloref/phyx}.}
 
+\product[2]{\textbf{Vaidya, G*}, Cellinese N, Lapp H (2022) A new phylogenetic data standard for computable clade definitions: the Phyloreference Exchange Format (Phyx). PeerJ 10: e12618. \doi{10.7717/peerj.12618}.}
+
+\product[2]{\textbf{Vaidya, G*}, Cellinese N, Lapp H (2021) JPhyloRef: a tool for testing and resolving phyloreferences. Journal of Open Source Software, 6(64), 3374. \doi{10.21105/joss.03374}.}
+
 \product[2]{\textbf{Vaidya, G*}, Lapp H, Cellinese N (October 22, 2020) Enabling Machines to Integrate Biodiversity Data with Evolutionary Knowledge. Presentation at the \textit{TDWG 2020} conference, online. \\
 \doi{10.3897/biss.4.59088}.}
 
@@ -85,7 +99,7 @@ I worked full-time as the lead software developer on the Phyloreferencing projec
 
 \end{products}
 
-I also worked part-time on the Phyloreferencing project while completing my PhD (2016 to 2017).
+I also worked part-time on the Phyloreferencing project while completing my PhD (2016 to 2017) and for a short time while at RENCI under a subcontract (2019 to 2020).
 
 \begin{products}
 
