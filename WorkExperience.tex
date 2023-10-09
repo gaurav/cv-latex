@@ -5,15 +5,27 @@
 
 \entry{Oct 2019}{Present}{Semantic Web technologist}{RENCI, UNC Chapel Hill, North Carolina}
 
-At the Renaissance Computing Institute (RENCI) at the University of North Carolina (UNC), I work on several projects to facilitate the re-use of biomedical data by other scientists, with a particular focus on using Semantic Web technologies to make scientific data findable, accessible, interoperable, and reusable (FAIR). A key challenge is that many biomedical resource use different identifiers for identical or similar concepts, a challenge I first began working on during my PhD on biological taxonomy. To tackle this challenge, I help build databases that document how identifiers in one resource relate to identifiers in other resources. In addition, I work on tools that make it easier for anybody to use these mappings and their associated resources. The tools I work on use standards such as RDF and JSON-LD to store and transmit semantically rich data, use ontologies written in OWL to reason over data, and use descriptions in SHACL and ShEx to validate data and document data models. Where existing tools are unavailable or inadequate, I write software tools to fill this need. My current projects focus on genetic, disease and other biomedical data, but I look forward to working with other kinds of data in the future. I work primarily in Python and Scala to build these tools.
+At the Renaissance Computing Institute (RENCI) at the University of North Carolina (UNC), I work on several projects to facilitate the re-use of biomedical data by other scientists, with a particular focus on using Semantic Web technologies to make scientific data findable, accessible, interoperable, and reusable (FAIR). A key challenge with using the Semantic Web in scientific applications is that many biomedical resource use different identifiers for similar or identically defined concepts. This is a problem I have a lot of experience with, as I first started working on this challenge in during my PhD on biological taxonomy, as the same biological taxa may be assigned different identifiers in different taxonomic databases, or multiple biological taxa may be referred to by the same biological taxa.
+
+To tackle this challenge, I help build databases that document how identifiers in one resource relate to identifiers in other resources. In addition, I work on tools that make it easier for anybody to use these mappings and their associated resources. The tools I work on use standards such as RDF and JSON-LD to store and transmit semantically rich data, use ontologies written in OWL to reason over data, and use descriptions in SHACL and ShEx to validate data and document data models. Where existing tools are unavailable or inadequate, I write software tools to fill this need. My current projects over almost every time of biological concept, from biological taxa to genes and proteins to biochemical pathways to diseases and phenotypes to small molecules and drugs. I work primarily in Python and Scala to build these tools.
 
 \begin{itemize}
 
-\item \textit{NCATS Biomedical Data Translator} (2022 - present): The Translator project is an ambitious project to build a tool capable of answering complex biomedical questions by querying a number of different search engines, each of which can itself query a large number of knowledge sources, all of whom must use the same protocols to transmit information about the same biomedical concepts: diseases, genes, proteins, small molecules and many others. But different Translator components may refer to these concepts with different identifiers. The databases I work on act as the identifier store for 
+\item \textit{NCATS Biomedical Data Translator} (2022 - present): The Translator project is an ambitious project to build a tool capable of answering complex biomedical questions by querying multiple biomedical search engines (``Autonomous Relay Agents'') developed for this purpose, each of which can itself query a large number of knowledge sources. These results are synthesized into a single list of potential solutions with citations to appropriate publications and presented to the user. However, different Translator components -- particularly the knowledge sources -- could use different identifiers to refer to the same biomedical concepts.
+
+In order to create a single set of normalized concept identifiers, RENCI previously developed a Node Normalization tool, a massive database of biomedical identifier cliques that are believed to refer to the same concept, with a single preferred identifier for each clique. We also developed a Name Resolution tool, which allows this database of cliques to be searched for by names and synonyms, which is useful for both recognizing biomedical concepts mentioned in text and for enabling autocomplete functionality on Translator websites.
+
+Since 2022, I have been in charge of both of these components, as well as a developer on one of the knowledge sources (CAM-KP) that provides information on biomedical pathways to the Translator search engines.
 
 \begin{products}
 
-\product[2]{Test}{Test}
+\product[2]{Babel, a Snakemake-based Python application for generating the biomedical concept clique information: \github{TranslatorSRI}{Babel}.}
+
+\product[2]{Node Normalization, a Python web app for normalizing biomedical concept identifiers and Translator API (TRAPI) messages: \github{TranslatorSRI}{NodeNormalization}.}
+
+\product[2]{Name Resolution, a Python web app for searching for biomedical concept identifiers using names and synonyms: \github{TranslatorSRI}{NameResolution}.}
+
+\product[2]{Babel Validation (started by me), a set of Scala and Vue/JavaScript tools for validating Babel cliques and Node Normalization/Name Resolution endpoints: \github{TranslatorSRI}{babel-validation}.}
 
 \end{products}
 
