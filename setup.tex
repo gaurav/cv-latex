@@ -13,7 +13,8 @@
 \usepackage{pifont}
 \usepackage{comment}
 \usepackage[small,compact]{titlesec}
-\usepackage[colorlinks=true, urlcolor=blue, linkcolor=black]{hyperref}
+
+\usepackage[colorlinks=true, urlcolor=blue, linkcolor=black, breaklinks=true]{hyperref}
 
 %\marginsize{28mm}{28mm}{8mm}{8mm}
 %\marginsize{22mm}{22mm}{4mm}{4mm}
@@ -51,3 +52,8 @@
     \Letter~{\tt \href{mailto:#1}{#1}}
 }
 \newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:#1}}
+
+\newcommand{\github}[2]{on GitHub at \href{https://github.com/#1/#2}{{#1}/{#2}}}
+
+\newcommand{\fromto}[2]{{#1} to {#2}}
+\newcommand{\since}[1]{since #1}
