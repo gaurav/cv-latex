@@ -15,17 +15,21 @@ To tackle this challenge, I help build databases that document how identifiers i
 
 In order to create a single set of normalized concept identifiers, RENCI previously developed a Node Normalization tool, a massive database of biomedical identifier cliques that are believed to refer to the same concept, with a single preferred identifier for each clique. We also developed a Name Resolution tool, which allows this database of cliques to be searched for by names and synonyms, which is useful for both recognizing biomedical concepts mentioned in text and for enabling autocomplete functionality on Translator websites.
 
-Since 2022, I have been in charge of both of these components, as well as a developer on one of the knowledge sources (CAM-KP) that provides information on biomedical pathways to the Translator search engines.
+Since 2022, I have been in charge of both of these components, as well as a developer on one of the knowledge sources (Causal Activity Models Knowledge Provider, or CAM-KP) that provides information on biomedical pathways to the Translator search engines.
 
 \begin{products}
 
-\product[2]{Babel, a Snakemake-based Python application for generating the biomedical concept clique information: \github{TranslatorSRI}{Babel}.}
+\product[2]{Babel, a Snakemake-based Python data pipeline for generating the biomedical concept clique information: \github{TranslatorSRI}{Babel}.}
 
 \product[2]{Node Normalization, a Python web app for normalizing biomedical concept identifiers and Translator API (TRAPI) messages: \github{TranslatorSRI}{NodeNormalization}.}
 
 \product[2]{Name Resolution, a Python web app for searching for biomedical concept identifiers using names and synonyms: \github{TranslatorSRI}{NameResolution}.}
 
 \product[2]{Babel Validation (started by me), a set of Scala and Vue/JavaScript tools for validating Babel cliques and Node Normalization/Name Resolution endpoints: \github{TranslatorSRI}{babel-validation}.}
+
+\product[2]{CAM-Pipeline, a data pipeline using Make, Scala and Souffle to convert biomedical pathway information from a variety of data sources into the TRAPI format for use by Translator applications: \github{ExposuresProvider}{cam-pipeline}.}
+
+\product[2]{CAM-KP-API (2022-23), a Scala web app for making CAM-KP biomedical pathway information accessible via TRAPI. Now replaced with the ORION pipeline and Plater tool, but source code still available: \github{ExposuresProvider}{cam-kp-api}.}
 
 \end{products}
 
